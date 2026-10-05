@@ -36,7 +36,7 @@ const steps = [
 
 function Process() {
   return (
-    <section id="process" className="bg-[#f7faf7] py-24 sm:py-28">
+    <section id="process" className="bg-[#f7faf7] py-12">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <Reveal>
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#16813b]">

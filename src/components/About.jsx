@@ -27,7 +27,7 @@ const journey = [
 
 function About() {
   return (
-    <section id="about" className="bg-white py-24 sm:py-28">
+    <section id="about" className="bg-white py-12">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <Reveal>

@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 function CTA() {
   return (
-    <section className="bg-white py-24 sm:py-28">
+    <section className="bg-white py-12">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <Reveal>
           <div className="relative overflow-hidden rounded-[2rem] border border-green-100 bg-gradient-to-br from-green-50 via-white to-orange-50 p-8 sm:p-12 lg:p-16">
@@ -37,7 +37,7 @@ function CTA() {
                 </motion.a>
 
                 <a
-                  href="mailto:contact@patilarena.com"
+                  href="mailto:connect@patilarena.com"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-3.5 text-sm font-bold text-gray-700 transition-colors hover:border-green-200 hover:text-[#16813b]"
                 >
                   <HiOutlineMail />

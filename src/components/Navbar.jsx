@@ -3,100 +3,101 @@ import { AnimatePresence, motion } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import logo from "../assets/logo.png";
 
-
 const navItems = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
+  { label: "Capabilities", href: "#capabilities" },
   { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
   { label: "Work", href: "#work" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
-function Navbar() {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 20);
     };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleNavigation = () => {
-    setMobileOpen(false);
-  };
 
   return (
     <motion.header
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-gray-200/80 bg-white/90 shadow-sm backdrop-blur-xl"
-          : "bg-white/70 backdrop-blur-md"
-      }`}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 rounded-3xl mt-3 mx-10 py-2! ${scrolled
+        ? "border-b border-black/[0.06] bg-white/85 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)] backdrop-blur-lg"
+        : "bg-white/60 py-2 backdrop-blur-md"
+        }`}
     >
-      <div className="mx-auto flex h-[48px] mt-2 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 sm:px-8">
         <a
           href="#home"
-          onClick={handleNavigation}
-          className="group flex items-center"
+          className="group flex items-center gap-3"
         >
-          <motion.img
-            src={logo}
-            alt="PatilArena"
-            className="h-10 w-auto object-contain"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-          />
+          <div className="relative">
+            <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-orange-500/20 to-blue-500/20 opacity-0 blur-md transition duration-500 group-hover:opacity-100" />
+
+            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-black/5 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-md">
+              <img
+                src={logo}
+                alt="PatilArena Technologies"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col">
+            <span className="text-md font-extrabold tracking-tight bg-gradient-to-r from-red-600 via-blue-700 to-green-900 bg-clip-text text-transparent">
+              PatilArena
+            </span>
+
+            <span className="text-[9px] font-bold uppercase tracking-[0.2em] bg-gradient-to-r from-red-600 via-blue-700 to-green-900 bg-clip-text text-transparent0">
+              Technologies
+            </span>
+          </div>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+
+        {/* Desktop Nav */}
+        <nav className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="relative text-sm font-semibold text-gray-600 transition-colors hover:text-[#18823b]"
+              className="text-xs font-semibold text-[#526057] tracking-wide transition-colors hover:text-[#15803d]"
             >
               {item.label}
-
-              <span className="absolute -bottom-2 left-0 h-[2px] w-0 rounded-full bg-[#18823b] transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        {/* CTA Button */}
+        <div className="hidden lg:flex items-center gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center rounded-full bg-[#16813b] px-3 py-1 text-sm font-bold text-white shadow-lg shadow-green-900/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#126d32]"
+            className="inline-flex items-center rounded-full bg-[#15803d] px-5 py-2 text-xs font-semibold text-white shadow-sm transition-all duration-200 hover:bg-[#126d33] hover:shadow-md hover:-translate-y-0.5"
           >
-            Let's Build Together
+            Let&apos;s Build Together
           </a>
         </div>
 
+        {/* Mobile Hamburger */}
         <button
           type="button"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((value) => !value)}
-          className="rounded-xl border border-gray-200 bg-white p-2.5 text-gray-800 lg:hidden"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          className="rounded-xl border border-black/10 bg-white/80 p-2 text-[#121814] lg:hidden backdrop-blur-md"
         >
-          {mobileOpen ? (
-            <HiX className="h-6 w-6" />
-          ) : (
-            <HiMenuAlt3 className="h-6 w-6" />
-          )}
+          {mobileOpen ? <HiX className="h-5 w-5" /> : <HiMenuAlt3 className="h-5 w-5" />}
         </button>
       </div>
 
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -104,29 +105,25 @@ function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-gray-100 bg-white lg:hidden"
+            className="overflow-hidden bg-gradient-to-r from-red-200 to-blue-300 mx-2 rounded-2xl px-6 py-6 lg:hidden"
           >
-            <nav className="mx-auto flex max-w-7xl flex-col px-5 py-5 sm:px-8">
-              {navItems.map((item, index) => (
-                <motion.a
+            <nav className="flex flex-col gap-4">
+              {navItems.map((item) => (
+                <a
                   key={item.label}
                   href={item.href}
-                  onClick={handleNavigation}
-                  initial={{ opacity: 0, x: -15 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="border-b border-gray-100 py-4 text-base font-semibold text-gray-700 last:border-0"
+                  onClick={() => setMobileOpen(false)}
+                  className="text-sm font-semibold text-[#121814] transition-colors hover:text-[#15803d]"
                 >
                   {item.label}
-                </motion.a>
+                </a>
               ))}
-
               <a
                 href="#contact"
-                onClick={handleNavigation}
-                className="mt-4 rounded-full bg-[#16813b] px-5 py-3 text-center text-sm font-bold text-white"
+                onClick={() => setMobileOpen(false)}
+                className="mt-2 inline-flex justify-center rounded-full bg-[#15803d] py-2.5 text-center text-xs font-semibold text-white"
               >
-                Let's Build Together
+                Let&apos;s Build Together
               </a>
             </nav>
           </motion.div>
@@ -135,5 +132,3 @@ function Navbar() {
     </motion.header>
   );
 }
-
-export default Navbar;

@@ -1,242 +1,149 @@
 import { HiArrowUp, HiOutlineMail } from "react-icons/hi";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import logo from "../assets/logo.png";
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
 import { MapPin } from "lucide-react";
-
-
 
 const companyLinks = [
   ["About Us", "#about"],
-  ["Careers", "#careers"],
-  ["Contact", "#contact"],
+  ["Careers", "#career"],
+  ["Work", "#work"],
+  ["Capabilities", "#capabilities"],
 ];
 
 const serviceLinks = [
-  ["Web Development", "#services"],
-  ["SaaS & MVP", "#services"],
+  ["Web Apps", "#capabilities"],
+  ["SaaS & MVPs", "#capabilities"],
   ["Backend & APIs", "#services"],
-  ["Business Applications", "#services"],
-  ["Mobile Development", "#services"],
-  ["Product Support", "#services"],
+  ["Dashboards", "#services"],
+  ["Mobile Apps", "#services"],
+  ["Cloud & Support", "#capabilities"],
 ];
 
 const socials = [
-  {
-    label: "LinkedIn",
-    href: "#",
-    icon: FaLinkedinIn,
-  },
-  {
-    label: "GitHub",
-    href: "#",
-    icon: FaGithub,
-  },
-  {
-    label: "Instagram",
-    href: "#",
-    icon: FaInstagram,
-  },
+  { label: "LinkedIn", href: "https://linkedin.com", icon: FaLinkedinIn },
+  { label: "GitHub", href: "https://github.com", icon: FaGithub },
+  { label: "Instagram", href: "https://instagram.com", icon: FaInstagram },
 ];
 
-
-
-function Footer() {
+export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-r from-red-200 to-blue-300 text-[#17221b]">
-      {/* Soft ambient gradients */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-32 -top-32 h-72 w-72 rounded-full bg-green-200/30 blur-[100px]" />
-
-        <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-orange-200/25 blur-[100px]" />
+    <footer className="relative overflow-hidden border-t border-black/[0.06] bg-gradient-to-r from-red-200 to-blue-300 text-[#121814]">
+      {/* Subtle architectural ambient glow */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-30">
+        <div className="absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-emerald-100 blur-[100px]" />
+        <div className="absolute -right-20 top-0 h-64 w-64 rounded-full bg-amber-100 blur-[100px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        {/* =====================================================
-            TOP BRAND STRIP
-        ====================================================== */}
-
-        <div className="flex items-center justify-between border-b border-gray-200/80 py-4">
-          <div className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#16813b]" />
-
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">
-              PatilArena Technologies
-            </span>
-          </div>
-
-          <span className="hidden text-[10px] font-medium text-gray-400 sm:block">
-            Software · Products · Innovation
-          </span>
-        </div>
-
-        {/* =====================================================
-            MAIN FOOTER
-        ====================================================== */}
-
-        <div className="grid gap-6 py-4 lg:grid-cols-[1.5fr_0.7fr_1.15fr_0.9fr]">
-          {/* Brand */}
-
+      <div className="relative mx-auto max-w-6xl px-5 py-8">
+        <div className="grid gap-10 lg:grid-cols-[1.5fr_0.8fr_1fr_1fr]">
+          {/* Brand Info */}
           <div>
-            <div className="flex items-center gap-3">
-              <div className="px-3 py-2">
-                <img
-                  src={logo}
-                  alt="PatilArena Technologies"
-                  className="h-16 w-auto object-contain"
-                />
-              </div>
-
-              <div className="hidden h-8 w-px bg-gray-200 sm:block" />
-
-              <span className="hidden text-xs font-medium leading-4 text-gray-600 sm:block">
-                Technology that
-                <br />
-                moves ideas forward.
-              </span>
-            </div>
-
-            <p className="mt-4 max-w-sm text-xs leading-6 text-gray-500">
-              We build modern web applications, SaaS products and digital
-              solutions that help businesses turn ideas into meaningful
-              technology.
+            <a href="#home" className="inline-block">
+              <img
+                src={logo}
+                alt="PatilArena Technologies"
+                className="h-10 w-auto object-contain"
+              />
+            </a>
+            <p className="mt-4 max-w-sm text-xs sm:text-sm leading-relaxed text-[#526057]">
+              PatilArena Technologies partners with visionary founders and enterprises to engineer
+              scalable software, high-performance web products, and resilient digital systems.
             </p>
-
-            {/* Gradient accent */}
-
-            <div className="mt-4 flex items-center gap-2">
-              <span className="h-1 w-8 rounded-full bg-gradient-to-r from-[#16813b] to-[#e58b35]" />
-
-              <span className="text-[10px] font-bold text-[#16813b]">
-                Rooted in Values. Built for the World.
-              </span>
+            <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-800/15 bg-emerald-50/70 px-3 py-1 text-[11px] font-bold text-emerald-800">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
+              Rooted in Values · Built for the World
             </div>
           </div>
 
-          {/* Company */}
-
+          {/* Navigation Links */}
           <div>
-            <h3 className="text-xs font-extrabold uppercase tracking-[0.18em] text-gray-800">
-              Company
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#121814]">
+              Navigation
             </h3>
-
-            <nav className="mt-4 space-y-2.5">
+            <ul className="mt-4 space-y-2.5">
               {companyLinks.map(([label, href]) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="group flex w-fit items-center gap-1 text-xs text-gray-500 transition-colors hover:text-[#16813b]"
-                >
-                  {label}
-
-                  <HiOutlineArrowUpRight className="text-[10px] opacity-0 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
-                </a>
+                <li key={label}>
+                  <a
+                    href={href}
+                    className="group inline-flex items-center gap-1 text-xs sm:text-sm text-[#526057] transition-colors hover:text-[#15803d]"
+                  >
+                    {label}
+                    <HiOutlineArrowUpRight className="text-[10px] opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0.5" />
+                  </a>
+                </li>
               ))}
-            </nav>
+            </ul>
           </div>
 
-          {/* Services */}
-
+          {/* Capabilities */}
           <div>
-            <h3 className="text-xs font-extrabold uppercase tracking-[0.18em] text-gray-800">
-              What We Build
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#121814]">
+              Capabilities
             </h3>
-
-            <nav className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2.5">
+            <ul className="mt-4 space-y-2.5">
               {serviceLinks.map(([label, href]) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="group flex items-center gap-1.5 text-xs text-gray-500 transition-colors hover:text-[#16813b]"
-                >
-                  <span className="h-1 w-1 rounded-full bg-gray-300 transition-colors group-hover:bg-[#16813b]" />
-
-                  {label}
-                </a>
+                <li key={label}>
+                  <a
+                    href={href}
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm text-[#526057] transition-colors hover:text-[#15803d]"
+                  >
+                    <span className="h-1 w-1 rounded-full bg-emerald-700/40" />
+                    {label}
+                  </a>
+                </li>
               ))}
-            </nav>
+            </ul>
           </div>
 
-          {/* Contact */}
-
+          {/* Contact & Location */}
           <div>
-            <h3 className="text-xs font-extrabold uppercase tracking-[0.18em] text-gray-800">
-              Get in Touch
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#121814]">
+              Connect
             </h3>
-
-            <div className="mt-3 flex items-start gap-2.5 text-sm text-gray-800 font-mono">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-blue-90 text-blue-900">
-                <MapPin className="h-4 w-4" strokeWidth={2} />
-              </span>
-
-              <div className="leading-5">
-                <p className="font-medium text-gray-600">Pune, Maharashtra</p>
-                <p className="text-gray-400">411062 INDIA</p>
-              </div>
+            <div className="mt-4 flex items-start gap-2 text-xs sm:text-sm text-[#526057]">
+              <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-[#15803d]" />
+              <span>Pune, Maharashtra, India</span>
             </div>
-
             <a
-              href="mailto:contact@patilarena.com"
-              className="group mt-4 flex items-center gap-2.5 text-xs text-gray-500 transition-colors hover:text-[#16813b]"
+              href="mailto:connect@patilarena.com"
+              className="mt-3 flex items-center gap-2 text-xs sm:text-sm text-[#526057] transition-colors hover:text-[#15803d]"
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-green-50 text-[#16813b] transition-colors group-hover:bg-green-100">
-                <HiOutlineMail className="h-4 w-4" />
-              </span>
-
-              contact@patilarena.com
+              <HiOutlineMail className="h-4 w-4 text-[#15803d]" />
+              connect@patilarena.com
             </a>
 
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-6 flex items-center gap-3">
               {socials.map(({ label, href, icon: Icon }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
-                  title={label}
-                  className="group flex h-9 w-9 items-center justify-center rounded-full shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-green-200 hover:bg-green-50 hover:text-[#16813b]"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white text-[#526057] shadow-2xs transition-all hover:border-emerald-600 hover:text-emerald-700 hover:-translate-y-0.5"
                 >
-                  <Icon className="h-4 w-4 transition-transform duration-200 group-hover:scale-110" />
+                  <Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
-
-
           </div>
         </div>
 
-        {/* =====================================================
-            BOTTOM BAR
-        ====================================================== */}
-
-        <div className="flex flex-col gap-3 border-t border-gray-200/80 py-3 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} PatilArena Technologies Private
-            Limited. All rights reserved.
-          </p>
-
-          <div className="flex items-center gap-5">
-            <span className="text-gray-400">PatilArena™</span>
-
-            <a
-              href="#home"
-              className="group flex items-center gap-1.5 font-semibold text-gray-500 transition-colors hover:text-[#16813b]"
-            >
-              Back to top
-
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gray-100 transition-all group-hover:bg-green-50">
-                <HiArrowUp className="transition-transform group-hover:-translate-y-0.5" />
-              </span>
-            </a>
-          </div>
+        {/* Bottom copyright */}
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-black/[0.06] pt-4 text-xs text-[#8a968e]">
+          <p>© {new Date().getFullYear()} PatilArena Technologies. All rights reserved.</p>
+          <a
+            href="#home"
+            className="group inline-flex items-center gap-1.5 font-semibold text-[#526057] transition-colors hover:text-[#15803d]"
+          >
+            Back to top
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/[0.04] transition-colors group-hover:bg-emerald-100 group-hover:text-emerald-800">
+              <HiArrowUp className="h-3 w-3" />
+            </span>
+          </a>
         </div>
       </div>
     </footer>
   );
 }
-
-export default Footer;
-

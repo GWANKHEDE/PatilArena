@@ -20,15 +20,11 @@ function Technologies() {
   const items = [...technologies, ...technologies];
 
   return (
-    <section className="overflow-hidden bg-white py-24 sm:py-28">
+    <section className="overflow-hidden bg-white py-12">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#16813b]">
-            Technology
-          </p>
-
-          <h2 className="text-4xl font-extrabold tracking-[-0.03em] text-[#17201b] sm:text-5xl">
-            Technology That Moves Business Forward
+        <Reveal className="mx-auto text-center">
+          <h2 className="text-4xl font-extrabold tracking-[-0.03em] sm:text-5xl bg-gradient-to-r from-[#16813b] to-[#e87522] bg-clip-text text-transparent">
+            <span className="text-[#16813b]">Technology </span>That Moves Business Forward
           </h2>
         </Reveal>
       </div>

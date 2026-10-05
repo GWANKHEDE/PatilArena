@@ -59,7 +59,7 @@ function Contact() {
           <div className="mb-8 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <h2 className="mt-2 text-3xl font-black leading-none tracking-[-0.045em] text-[#17201b] sm:text-4xl lg:text-5xl">
-                Let&apos;s turn your idea into{" "} 
+                Let&apos;s turn your idea into{" "}
                 <span className="bg-gradient-to-r from-[#16813b] to-[#e58b35] bg-clip-text text-transparent">
                   something real.
                 </span>
@@ -95,8 +95,8 @@ function Contact() {
                   <ContactLink
                     icon={<HiOutlineMail />}
                     label="Email"
-                    value="contact@patilarena.com"
-                    href="mailto:contact@patilarena.com"
+                    value="connect@patilarena.com"
+                    href="mailto:connect@patilarena.com"
                   />
 
                   <ContactLink

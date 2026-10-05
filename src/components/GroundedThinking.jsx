@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 function GroundedThinking() {
   return (
-    <section className="relative overflow-hidden bg-white py-24 sm:py-28">
+    <section className="relative overflow-hidden bg-white py-12">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
