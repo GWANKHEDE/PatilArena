@@ -48,9 +48,9 @@ function Process() {
         <Reveal>
           <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h2 className="text-[clamp(2.8rem,6vw,5rem)] font-bold leading-[.92] tracking-[-.055em] text-[#17201b]">
+              <h2 className="text-[2.1rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[5rem] font-bold leading-[.98] tracking-[-.055em] text-[#17201b]">
                 From idea to
-                <span className="bg-gradient-to-r from-[#16813b] ml-2 via-[#31b960] to-[#82d99c] bg-clip-text text-transparent">
+                <span className="ml-2 bg-gradient-to-r from-[#16813b] via-[#31b960] to-[#82d99c] bg-clip-text text-transparent">
                   something real.
                 </span>
               </h2>
@@ -76,18 +76,18 @@ function Process() {
                     {/* gradient reflection */}
                     <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#6ee797]/20 blur-2xl transition-transform duration-500 group-hover:scale-150" />
 
-                    <div className="relative">
+                    <div className="relative flex items-center justify-center gap-3  md:hidden">
                       <div className="flex items-center justify-between">
-                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#16813b] to-[#42c96c] text-[11px] font-bold text-white shadow-[0_5px_15px_rgba(22,129,59,.22)]">
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-red-200 to-[#624bff] text-xs font-bold text-white shadow-[0_5px_15px_rgba(22,129,59,.22)]">
                           {step.number}
                         </span>
 
-                        <span className="text-[10px] font-medium tracking-wider text-[#a1aaa4]">
+                        <span className="hidden md:inline text-[10px] font-medium tracking-wider text-[#a1aaa4]">
                           {String(index + 1).padStart(2, "0")}/06
                         </span>
                       </div>
 
-                      <h3 className="mt-8 text-lg font-bold tracking-[-.025em] text-[#17201b]">
+                      <h3 className="mt-0 md:mt-8 text-lg font-bold tracking-[-.025em] bg-gradient-to-r from-red-400 to-blue-400 bg-clip-text text-transparent">
                         {step.title}
                       </h3>
 

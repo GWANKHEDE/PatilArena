@@ -1,6 +1,7 @@
 import { HiArrowUp, HiOutlineMail } from "react-icons/hi";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import logo from "../assets/logo.png";
+import PatilarenaLogo from "../assets/PatilArena.png";
 import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
 import { MapPin } from "lucide-react";
 
@@ -38,26 +39,15 @@ export default function Footer() {
       <div className="relative mx-auto max-w-6xl px-5 py-8">
         <div className="grid gap-10 lg:grid-cols-[1.5fr_0.8fr_1fr_1fr]">
           {/* Brand Info */}
-          <div>
-            <div className="flex items-center gap-4">
-              <a href="#home" className="shrink-0">
-                <img
-                  src={logo}
-                  alt="PatilArena Technologies"
-                  className="h-14 w-auto object-contain transition duration-500 hover:scale-110 hover:blur-[1px]"
-                />
-              </a>
-
-              <p className="text-lg bg-gradient-to-r from-rose-400 via-violet-400 to-sky-500 bg-clip-text font-mono font-bold tracking-tight text-transparent">
-                PatilArena Technologies            
-              </p>
-            </div>
-
-            <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-800/15 bg-emerald-50/70 px-3 py-1 text-[11px] font-bold text-emerald-800">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
-              Rooted in Values · Built for the World
-            </div>
-          </div>
+      <div className="flex items-center justify-center">
+        <a href="#home" className="h-full w-full">
+          <img
+            src={PatilarenaLogo}
+            alt="PatilArena Technologies"
+            className="h-fit max-h-74 -m-8 w-full object-contain"
+          />
+        </a>
+      </div>
 
           {/* Navigation Links */}
           <div>
