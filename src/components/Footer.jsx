@@ -39,17 +39,20 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.5fr_0.8fr_1fr_1fr]">
           {/* Brand Info */}
           <div>
-            <a href="#home" className="inline-block">
-              <img
-                src={logo}
-                alt="PatilArena Technologies"
-                className="h-10 w-auto object-contain"
-              />
-            </a>
-            <p className="mt-4 max-w-sm text-xs sm:text-sm leading-relaxed text-[#526057]">
-              PatilArena Technologies partners with visionary founders and enterprises to engineer
-              scalable software, high-performance web products, and resilient digital systems.
-            </p>
+            <div className="flex items-center gap-4">
+              <a href="#home" className="shrink-0">
+                <img
+                  src={logo}
+                  alt="PatilArena Technologies"
+                  className="h-14 w-auto object-contain transition duration-500 hover:scale-110 hover:blur-[1px]"
+                />
+              </a>
+
+              <p className="text-lg bg-gradient-to-r from-rose-400 via-violet-400 to-sky-500 bg-clip-text font-mono font-bold tracking-tight text-transparent">
+                PatilArena Technologies            
+              </p>
+            </div>
+
             <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-800/15 bg-emerald-50/70 px-3 py-1 text-[11px] font-bold text-emerald-800">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
               Rooted in Values · Built for the World
@@ -132,7 +135,10 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-black/[0.06] pt-4 text-xs text-[#8a968e]">
-          <p>© {new Date().getFullYear()} PatilArena Technologies. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} PatilArena Technologies. All rights
+            reserved.
+          </p>
           <a
             href="#home"
             className="group inline-flex items-center gap-1.5 font-semibold text-[#526057] transition-colors hover:text-[#15803d]"
