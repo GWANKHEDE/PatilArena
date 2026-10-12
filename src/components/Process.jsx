@@ -76,7 +76,7 @@ function Process() {
                     {/* gradient reflection */}
                     <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#6ee797]/20 blur-2xl transition-transform duration-500 group-hover:scale-150" />
 
-                    <div className="relative flex items-center justify-center gap-3  md:hidden">
+                    <div className="relative flex items-center justify-center gap-3  md:block">
                       <div className="flex items-center justify-between">
                         <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-red-200 to-[#624bff] text-xs font-bold text-white shadow-[0_5px_15px_rgba(22,129,59,.22)]">
                           {step.number}

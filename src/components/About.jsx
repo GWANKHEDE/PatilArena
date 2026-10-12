@@ -27,18 +27,17 @@ const journey = [
 
 function About() {
   return (
-    <section id="about" className="bg-white py-12">
+    <section id="about" className="bg-white py-6 md:py-12">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="grid gap-6 md:gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <Reveal>
-            <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#16813b]">
+            <strong className="flex items-center justify-center mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#16813b]">
               About PatilArena
-            </p>
+            </strong>
 
-            <h2 className="text-4xl font-extrabold leading-tight tracking-[-0.03em] text-[#17201b] sm:text-5xl">
+            <h2 className="text-3xl sm:text-3xl md:text-[4rem] lg:text-[5rem] font-bold leading-[.98] tracking-[-.055em] text-[#17201b]">
               Built from Strong Roots.
-              <br />
-              Designed for the Future.
+              <span className="bg-gradient-to-r from-[#16813b] to-[#e87522] bg-clip-text text-transparent"> Designed for the Future. </span>
             </h2>
           </Reveal>
 
@@ -66,21 +65,21 @@ function About() {
             <Reveal key={item.number} delay={index * 0.08}>
               <motion.div
                 whileHover={{ y: -6 }}
-                className="group h-full rounded-3xl border border-gray-100 bg-[#fbfdfb] p-6 transition-shadow duration-300 hover:shadow-xl hover:shadow-green-900/5"
+                className="flex items-center justify-center gap-4 md:block group h-full rounded-3xl border border-gray-100 bg-[#fbfdfb] p-6 transition-shadow duration-300 hover:shadow-xl hover:shadow-green-900/5"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-bold text-[#16813b]">
                     {item.number}
                   </span>
 
-                  <HiArrowRight className="text-gray-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#16813b]" />
+                  <HiArrowRight className="hidden md:block text-gray-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#16813b]" />
                 </div>
 
-                <h3 className="mt-10 text-lg font-extrabold tracking-wide text-gray-800">
+                <h3 className="mt-0 md:mt-10 text-md font-extrabold tracking-tight text-gray-800">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-gray-500">
+                <p className="mt-3 text-xs leading-6 text-gray-500">
                   {item.text}
                 </p>
               </motion.div>
