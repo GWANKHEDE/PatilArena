@@ -92,7 +92,7 @@ function Services() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <Reveal>
           <div>
-            <h2 className="text-4xl font-black text-[#17201b] overflow-ellipsi overflow-hidden">
+            <h2 className="overflow-hidden text-4xl font-black text-[#17201b]">
               Ideas have
               <span className="ml-3 bg-gradient-to-r from-[#16813b] via-[#3ebc65] to-[#F4A11A] bg-clip-text text-transparent">
                 momentum.

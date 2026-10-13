@@ -3,28 +3,15 @@ import {
   HiOutlineMail,
   HiOutlineLocationMarker,
 } from "react-icons/hi";
-import {
-  HiOutlineArrowUpRight,
-  HiOutlineSparkles,
-} from "react-icons/hi2";
+import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import Reveal from "./Reveal";
 
 const initialForm = {
   name: "",
   email: "",
   company: "",
-  projectType: "",
   message: "",
 };
-
-const projectTypes = [
-  ["web", "Web App"],
-  ["saas", "SaaS / MVP"],
-  ["backend", "Backend / API"],
-  ["business", "Business App"],
-  ["mobile", "Mobile App"],
-  ["support", "Support"],
-];
 
 const fieldClass =
   "w-full rounded-xl border border-gray-200 bg-[#fafcfb] px-3.5 py-2.5 text-xs text-gray-700 outline-none transition-all placeholder:text-gray-400 hover:border-gray-300 focus:border-[#16813b] focus:bg-white focus:ring-4 focus:ring-green-50";

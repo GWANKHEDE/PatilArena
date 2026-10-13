@@ -1,24 +1,23 @@
 import { HiArrowUp, HiOutlineMail } from "react-icons/hi";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
-import logo from "../assets/logo.png";
 import PatilarenaLogo from "../assets/PatilArena.png";
 import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
 import { MapPin } from "lucide-react";
 
 const companyLinks = [
   ["About Us", "#about"],
-  ["Careers", "#career"],
+  ["Careers", "#contact"],
   ["Work", "#work"],
   ["Capabilities", "#capabilities"],
 ];
 
 const serviceLinks = [
-  ["Web Apps", "#capabilities"],
-  ["SaaS & MVPs", "#capabilities"],
+  ["Web Apps", "#services"],
+  ["SaaS & MVPs", "#services"],
   ["Backend & APIs", "#services"],
   ["Dashboards", "#services"],
   ["Mobile Apps", "#services"],
-  ["Cloud & Support", "#capabilities"],
+  ["Cloud & Support", "#contact"],
 ];
 
 const socials = [
