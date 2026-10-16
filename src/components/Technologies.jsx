@@ -37,7 +37,7 @@ function Technologies() {
           {items.map((technology, index) => (
             <div
               key={`${technology}-${index}`}
-              className="flex min-w-[150px] items-center justify-center rounded-2xl border border-gray-200 bg-[#fbfdfb] px-6 py-4 text-sm font-bold text-gray-600"
+              className="flex min-w-[150px] items-center justify-center rounded-2xl border border-gray-200 bg-white/40 px-3 py-2 text-sm font-bold text-gray-600"
             >
               {technology}
             </div>
